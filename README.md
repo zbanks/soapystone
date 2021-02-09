@@ -8,8 +8,13 @@ See [`phrases.py`](soapystone/phrases.py) for a full list of supported phrases &
 
 ## Installation / Usage
 
-TODO
-
 ```
-env PYTHONPATH=. python3.9 -m pylint --load-plugins=soapystone --disable=all --enable=soapstone soapystone/
+pip install soapystone
+```
+
+Run `pylint` with `--load-plugins=soapystone` to include the `soapstone` checks. It will raise `E2601: non-soapstone` on invalid comments.
+
+Example to run on `soapystone`'s own code (disabling all other checks):
+```
+pylint --load-plugins=soapystone --disable=all --enable=soapstone soapystone/
 ```
